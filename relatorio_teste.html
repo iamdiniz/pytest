@@ -1,0 +1,50 @@
+
+    <html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <style>
+            .table { margin-top: 20px; }
+            .success { background-color: #d4edda; }
+            .failure { background-color: #f8d7da; color: #721c24; }
+        </style>
+        <title>Relatório de Teste Pytest</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text-center mt-5">Relatório de Teste Pytest</h1>
+            <p class="text-center text-muted">Resumo dos testes realizados</p>
+            <table class="table table-bordered table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Nome do Teste</th>
+                        <th>Classe</th>
+                        <th>Status</th>
+                        <th>Tempo</th>
+                        <th>Erro/Failure</th>
+                    </tr>
+                </thead>
+                <tbody>
+    
+            <tr class="failure">
+                <td>test_quando_idade_for_18_entao_deve_retornar_1</td>
+                <td>tests.test_qualquernome</td>
+                <td>Falha</td>
+                <td>0.001s</td>
+                <td>assert 0 == 1
+
+                def test_quando_idade_for_18_entao_deve_retornar_1():
+                    entrada = 17
+                    esperado = 1
+                    resultado = verificar_idade(entrada)
+                    assert resultado == esperado
+                E       assert 0 == 1
+                tests	est_qualquernome.py:12: AssertionError
+            </td>
+            </tr>
+            
+                </tbody>
+            </table>
+        </div>
+    </body>
+    </html>
+    

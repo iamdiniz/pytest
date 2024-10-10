@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.050" timestamp="2024-10-03T14:10:41.200636-03:00" hostname="NT-500"><testcase classname="tests.test_qualquernome" name="test_quando_idade_for_18_entao_deve_retornar_1" time="0.001"><failure message="assert 0 == 1">def test_quando_idade_for_18_entao_deve_retornar_1():
+        entrada = 17
+        esperado = 1
+    
+        resultado = verificar_idade(entrada)
+    
+&gt;       assert resultado == esperado
+E       assert 0 == 1
+
+tests\test_qualquernome.py:12: AssertionError</failure></testcase></testsuite></testsuites>
