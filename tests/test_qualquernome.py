@@ -41,13 +41,11 @@ def test_quando_idade_for_18_entao_deve_retornar_1():
     assert resultado == esperado
     
 @mark.parametrizado    
-@mark.parametrize(
-    'entrada',
-    [2, 4, 6, 9]
-)
-def test_deve_retornar_true_se_for_par(entrada):
-    esperado = True
-    
+@mark.parametrize( 
+    'entrada, esperado',
+    [(2, True), (1, False), (4, True), (3, False)]
+) # Quando tiver entrada e esperado, colocasse o par chave e valor como se fosse: entrada & esperado
+def test_deve_retornar_valor_esperado(entrada, esperado):
     resultado = verificar_se_e_impar_ou_par(entrada)
     
     assert resultado == esperado
