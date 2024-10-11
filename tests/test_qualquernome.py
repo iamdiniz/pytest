@@ -49,3 +49,15 @@ def test_deve_retornar_valor_esperado(entrada, esperado):
     resultado = verificar_se_e_impar_ou_par(entrada)
     
     assert resultado == esperado
+    
+def somar_algo(numero1, numero2):
+    print("Entrei aqui")
+    soma = numero1 + numero2
+    return soma
+    
+# Pra testar isso eu preciso estar no contexto do stout
+@mark.stdout
+def test_somar_algo_deve_retornar_entrei_aqui_na_tela(capsys): # Fixture, para testar eu preciso estar no contexto.
+    somar_algo(5, 5) # Por isso o capsys entra no contexto do console.
+    saida_do_console = capsys.readouterr() # Leia as saidas
+    assert saida_do_console.out == "Entrei aqui ou não?"
